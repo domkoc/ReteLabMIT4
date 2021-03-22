@@ -1,0 +1,10 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  mysql-backend:
+    image: mysql-backend
+  java-frontend:
+    image: retelab/java-gradle-project
+    volumes:
+      - /Users/dominik/Desktop/rete_docker/docker-lab:/project
+    links:
+      - mysql-backend
